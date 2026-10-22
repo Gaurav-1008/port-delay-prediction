@@ -2,7 +2,7 @@
 
 A complete local AI/ML assignment prototype. At vessel arrival, estimate the probability of waiting **more than six hours** for a berth, return selected-outcome confidence, and explain the main factors.
 
-**All modelling data and results are synthetic.** The existing AIS CSV is preserved separately. Everything stays local.
+**All modelling data and results are synthetic.** Everything stays local.
 
 ## Start here
 
@@ -19,7 +19,7 @@ source .venv/bin/activate
 jupyter notebook solution.ipynb
 ~~~
 
-Select **Python (port-delay-prediction)** and **Run > Run All Cells**. The notebook recreates the dataset, model, metrics, examples, and charts. Rebuild the PDF separately. Stop the server with Ctrl+C in Terminal.
+Select **Python (port-delay-prediction)** and **Run > Run All Cells**. The notebook recreates the dataset, model, metrics, examples, and charts. Stop the server with Ctrl+C in Terminal.
 
 ## Reproduce from a fresh checkout
 
@@ -32,10 +32,9 @@ python -m pip install -r requirements.txt
 python -m ipykernel install --sys-prefix --name port-delay-prediction --display-name "Python (port-delay-prediction)"
 python port_delay.py train
 python -m unittest discover -s tests -v
-python generate_report.py
 ~~~
 
-Only the project environment is modified. The kernel lives inside it. requirements.txt pins eight direct dependencies; transitive dependencies resolve during installation. PDF generation uses Arial if available, otherwise standard Helvetica.
+Only the project environment is modified. The kernel lives inside it. requirements.txt pins seven direct dependencies; transitive dependencies resolve during installation.
 
 Check dependencies with:
 
@@ -96,11 +95,8 @@ Validation results are stronger (F1=0.833, AUC=0.993). The weaker later-period p
 
 ~~~text
 port_delay.py                         Simulation, features, training, prediction CLI
-generate_report.py                    Build report from saved results
 tests/test_port_delay.py              Six checks
 data/synthetic_port_calls.csv         500 generated vessel visits
-examples/low_risk.json                Observed input example
-examples/high_risk.json               Observed input example
 results/model.joblib                 Fitted pipeline and metadata
 results/summary.json                 Settings, split counts, dataset hash
 results/metrics.csv                  Validation/test metrics
@@ -111,10 +107,9 @@ results/port_summary.csv             Descriptive port-level results
 results/example_predictions.json     Predictions and local explanations
 results/*.png                       Data, evaluation, coefficient charts
 output/pdf/port_congestion_report.pdf
-output/aiqon_submission.zip          Local package created after verification
 ~~~
 
-The original data/ais_data.csv remains locally and lacks the timestamps needed for this target. The archive includes generated data and source files; it excludes the unused AIS file, .venv, Git metadata, and temporary files.
+The data, fitted model, evaluation outputs, and technical report are included in the project. The notebook and command-line training workflow reproduce the modelling results.
 
 ## Limits and operational use
 

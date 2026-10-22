@@ -62,9 +62,7 @@ Two derived features are `queue_length / operational_berths` and `busy_berths / 
 
 Actual future weather, eventual berth start, final service duration for this visit, and statistics calculated from future records are excluded from the input features.
 
-## Existing dataset and proposed data source
-
-The existing `data/ais_data.csv` header contains an index column plus `mmsi`, `navigationalstatus`, `sog`, `cog`, `heading`, `shiptype`, `width`, `length`, and `draught`. It has no arrival or berth-start timestamps, port-visit identifiers, or waiting-time labels. It therefore cannot directly provide ground truth for the defined prediction. Low vessel speed alone does not establish a congestion-related delay.
+## Dataset
 
 The implementation uses 500 synthetic vessel visits with recorded arrival conditions and simulated berth-start times. DATA_DICTIONARY.md documents the simulator, and results/summary.json records the realized dataset. The metrics describe performance in that simulated environment.
 

@@ -1,6 +1,6 @@
 # Synthetic vessel visits: data dictionary
 
-One row is one visit to a fictional port. Times are UTC. The exported dataset has 500 visits; 150 earlier simulated visits warm up the queues and historical statistics and are not exported. No downloaded AIS rows are relabelled or mixed into this dataset.
+One row is one visit to a fictional port. Times are UTC. The exported dataset has 500 visits; 150 earlier simulated visits warm up the queues and historical statistics and are not exported.
 
 | Column | Type / units | Definition | Model use |
 |---|---|---|---|
@@ -48,7 +48,3 @@ The classifier does not receive visit IDs, port IDs, future operational events, 
 Nominal chronological partitions are 350 training, 50 validation, and 100 test visits. Before fitting, exclude training labels not known before the first validation arrival. Exclude validation labels not known before the first test arrival. This leaves 348 /47 /100 usable visits, with five excluded from fitting or selection. Completed later outcomes are available for retrospective test evaluation.
 
 The model is fitted on the 348 training records. Select C from 0.1, 1, and 10 using the lowest validation Brier score. Keep the decision threshold fixed at 0.5. Neither preprocessing nor hyperparameter selection uses test outcomes. Model development should use new forward holdouts if changed after reviewing these results.
-
-## Existing AIS CSV
-
-data/ais_data.csv is preserved separately and is not a training source. It contains vessel descriptors and motion fields but lacks the event timestamps needed to construct the chosen target. The portable submission archive includes the generated data; the original AIS file remains in the local project.

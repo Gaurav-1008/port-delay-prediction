@@ -1,0 +1,182 @@
+{
+  "low_risk": {
+    "source_visit": "VISIT_0432",
+    "observation": {
+      "queue_length": 0.0,
+      "operational_berths": 5.0,
+      "busy_berths": 0.0,
+      "arrivals_past_6h": 1.0,
+      "weather_severity": 0.0,
+      "past_avg_service_hours": 8.784788530698123
+    },
+    "result": {
+      "prediction": "no_delay_over_6_hours",
+      "delay_probability": 6.665525137732091e-06,
+      "confidence_score": 0.9999933344748623,
+      "confidence_definition": "Estimated probability of the selected outcome, not measured accuracy.",
+      "decision_threshold": 0.5,
+      "main_factors": [
+        {
+          "feature": "berth_utilization",
+          "description": "Fraction of operational berths occupied",
+          "value": 0.0,
+          "imputed": false,
+          "contribution_log_odds": -5.774913205060874,
+          "effect": "decreases delay risk"
+        },
+        {
+          "feature": "queue_per_berth",
+          "description": "Waiting vessels per operational berth",
+          "value": 0.0,
+          "imputed": false,
+          "contribution_log_odds": -3.2698560124088347,
+          "effect": "decreases delay risk"
+        },
+        {
+          "feature": "past_avg_service_hours",
+          "description": "Past average completed service time (hours)",
+          "value": 8.784788530698123,
+          "imputed": false,
+          "contribution_log_odds": 0.9866192393349688,
+          "effect": "increases delay risk"
+        }
+      ],
+      "factor_contributions": [
+        {
+          "feature": "berth_utilization",
+          "description": "Fraction of operational berths occupied",
+          "value": 0.0,
+          "imputed": false,
+          "contribution_log_odds": -5.774913205060874,
+          "effect": "decreases delay risk"
+        },
+        {
+          "feature": "queue_per_berth",
+          "description": "Waiting vessels per operational berth",
+          "value": 0.0,
+          "imputed": false,
+          "contribution_log_odds": -3.2698560124088347,
+          "effect": "decreases delay risk"
+        },
+        {
+          "feature": "past_avg_service_hours",
+          "description": "Past average completed service time (hours)",
+          "value": 8.784788530698123,
+          "imputed": false,
+          "contribution_log_odds": 0.9866192393349688,
+          "effect": "increases delay risk"
+        },
+        {
+          "feature": "arrival_pressure",
+          "description": "Arrivals in the last six hours per berth",
+          "value": 0.2,
+          "imputed": false,
+          "contribution_log_odds": -0.748017884587957,
+          "effect": "decreases delay risk"
+        },
+        {
+          "feature": "weather_severity",
+          "description": "Weather severity (0 clear, 1 moderate, 2 severe)",
+          "value": 0.0,
+          "imputed": false,
+          "contribution_log_odds": -0.3258227738305718,
+          "effect": "decreases delay risk"
+        }
+      ],
+      "reference_log_odds": -2.786564514979374,
+      "missing_fields_imputed": [],
+      "suggested_action": "Maintain the current plan and continue monitoring arrival conditions.",
+      "scope": "Synthetic-data prototype; real-port probability reliability is unverified."
+    }
+  },
+  "high_risk": {
+    "source_visit": "VISIT_0469",
+    "observation": {
+      "queue_length": 4.0,
+      "operational_berths": 5.0,
+      "busy_berths": 5.0,
+      "arrivals_past_6h": 3.0,
+      "weather_severity": 0.0,
+      "past_avg_service_hours": 8.728734434590109
+    },
+    "result": {
+      "prediction": "delay_over_6_hours",
+      "delay_probability": 0.7406331003403853,
+      "confidence_score": 0.7406331003403853,
+      "confidence_definition": "Estimated probability of the selected outcome, not measured accuracy.",
+      "decision_threshold": 0.5,
+      "main_factors": [
+        {
+          "feature": "berth_utilization",
+          "description": "Fraction of operational berths occupied",
+          "value": 1.0,
+          "imputed": false,
+          "contribution_log_odds": 1.7012720389754163,
+          "effect": "increases delay risk"
+        },
+        {
+          "feature": "queue_per_berth",
+          "description": "Waiting vessels per operational berth",
+          "value": 0.8,
+          "imputed": false,
+          "contribution_log_odds": 1.3439602232785266,
+          "effect": "increases delay risk"
+        },
+        {
+          "feature": "past_avg_service_hours",
+          "description": "Past average completed service time (hours)",
+          "value": 8.728734434590109,
+          "imputed": false,
+          "contribution_log_odds": 1.0926550414231655,
+          "effect": "increases delay risk"
+        }
+      ],
+      "factor_contributions": [
+        {
+          "feature": "berth_utilization",
+          "description": "Fraction of operational berths occupied",
+          "value": 1.0,
+          "imputed": false,
+          "contribution_log_odds": 1.7012720389754163,
+          "effect": "increases delay risk"
+        },
+        {
+          "feature": "queue_per_berth",
+          "description": "Waiting vessels per operational berth",
+          "value": 0.8,
+          "imputed": false,
+          "contribution_log_odds": 1.3439602232785266,
+          "effect": "increases delay risk"
+        },
+        {
+          "feature": "past_avg_service_hours",
+          "description": "Past average completed service time (hours)",
+          "value": 8.728734434590109,
+          "imputed": false,
+          "contribution_log_odds": 1.0926550414231655,
+          "effect": "increases delay risk"
+        },
+        {
+          "feature": "weather_severity",
+          "description": "Weather severity (0 clear, 1 moderate, 2 severe)",
+          "value": 0.0,
+          "imputed": false,
+          "contribution_log_odds": -0.3258227738305718,
+          "effect": "decreases delay risk"
+        },
+        {
+          "feature": "arrival_pressure",
+          "description": "Arrivals in the last six hours per berth",
+          "value": 0.6,
+          "imputed": false,
+          "contribution_log_odds": 0.023761686295678514,
+          "effect": "increases delay risk"
+        }
+      ],
+      "reference_log_odds": -2.786564514979374,
+      "missing_fields_imputed": [],
+      "suggested_action": "Review berth scheduling and notify downstream planners of potential disruption.",
+      "scope": "Synthetic-data prototype; real-port probability reliability is unverified."
+    }
+  }
+}

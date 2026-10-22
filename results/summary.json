@@ -1,0 +1,57 @@
+{
+  "seed": 42,
+  "n_records": 500,
+  "warmup_visits": 150,
+  "delay_threshold_hours": 6.0,
+  "decision_threshold": 0.5,
+  "selected_C": 10.0,
+  "split": {
+    "train": 348,
+    "validation": 47,
+    "test": 100,
+    "train_unresolved_excluded": 2,
+    "validation_unresolved_excluded": 3,
+    "validation_start": "2025-01-16T17:46:02.063294346+00:00",
+    "test_start": "2025-01-18T06:03:26.558130211+00:00"
+  },
+  "delayed_visits": 98,
+  "delay_rate": 0.196,
+  "test_delayed": 13,
+  "test_confusion_matrix": [
+    [
+      84,
+      3
+    ],
+    [
+      7,
+      6
+    ]
+  ],
+  "missing_values": {
+    "queue_length": 0,
+    "operational_berths": 0,
+    "busy_berths": 0,
+    "arrivals_past_6h": 0,
+    "weather_severity": 14,
+    "past_avg_service_hours": 15
+  },
+  "date_range": [
+    "2025-01-05T20:30:10.640229084+00:00",
+    "2025-01-21T00:57:25.781780368+00:00"
+  ],
+  "dataset_sha256": "a3f04d2b49e3d0c0366f1cfc83a7efdcbc8ec0fd32358ea7c76cf0398e9c2338",
+  "port_parameters": {
+    "PORT_A": {
+      "berths": 3,
+      "base_mean_service_hours": 7.0
+    },
+    "PORT_B": {
+      "berths": 5,
+      "base_mean_service_hours": 8.0
+    },
+    "PORT_C": {
+      "berths": 7,
+      "base_mean_service_hours": 8.5
+    }
+  }
+}

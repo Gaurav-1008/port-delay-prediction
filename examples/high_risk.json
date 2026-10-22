@@ -1,0 +1,8 @@
+{
+  "queue_length": 4.0,
+  "operational_berths": 5.0,
+  "busy_berths": 5.0,
+  "arrivals_past_6h": 3.0,
+  "weather_severity": 0.0,
+  "past_avg_service_hours": 8.728734434590109
+}

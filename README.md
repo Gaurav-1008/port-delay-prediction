@@ -10,8 +10,6 @@ A complete local AI/ML assignment prototype. At vessel arrival, estimate the pro
 - [output/pdf/port_congestion_report.pdf](output/pdf/port_congestion_report.pdf): three-page technical report.
 - [PROBLEM_DEFINITION.md](PROBLEM_DEFINITION.md): target, scope, and arrival-time information boundary.
 - [DATA_DICTIONARY.md](DATA_DICTIONARY.md): schema, simulation parameters, and evaluation boundaries.
-- [DEMO.md](DEMO.md): approximately four-minute demonstration outline.
-- [SUBMISSION_CHECKLIST.md](SUBMISSION_CHECKLIST.md): local deliverables.
 
 ## Open the notebook on this Mac
 
